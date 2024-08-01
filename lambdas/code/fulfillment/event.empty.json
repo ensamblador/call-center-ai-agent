@@ -1,0 +1,46 @@
+{
+    "inputMode": "Speech",
+    "requestAttributes": {
+        "x-amz-lex:accept-content-types": "PlainText,SSML",
+        "x-amz-lex:channels:platform": "Connect"
+    },
+    "sessionId": "3807aee5-68c6-4369-9ffd-e361d0f0ddfa",
+    "inputTranscript": "",
+    "rawInputTranscript": "",
+    "interpretations": [
+        {
+            "interpretationSource": "Lex",
+            "nluConfidence": 1.0,
+            "intent": {
+                "name": "FallbackIntent",
+                "slots": {},
+                "state": "InProgress",
+                "confirmationState": "None"
+            }
+        }
+    ],
+    "bot": {
+        "name": "bridge",
+        "version": "DRAFT",
+        "localeId": "es_US",
+        "id": "FZELVO24WI",
+        "aliasId": "TSTALIASID",
+        "aliasName": "TestBotAlias"
+    },
+    "responseContentType": "text/plain; charset=utf-8",
+    "sessionState": {
+        "originatingRequestId": "84804108-d6e9-4a7c-bf33-b67627017daf",
+        "sessionAttributes": {
+            "x-amz-lex:allow-interrupt:*:*": "true",
+            "x-amz-lex:barge-in-enabled:*:*": "true"
+        },
+        "intent": {
+            "name": "FallbackIntent",
+            "slots": {},
+            "state": "InProgress",
+            "confirmationState": "None"
+        }
+    },
+    "messageVersion": "1.0",
+    "invocationSource": "DialogCodeHook"
+}

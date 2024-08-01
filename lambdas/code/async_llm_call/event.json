@@ -1,0 +1,49 @@
+{
+    "inputMode": "Text",
+    "sessionId": "461004555540462",
+    "inputTranscript": "Hola",
+    "interpretations": [
+        {
+            "interpretationSource": "Lex",
+            "intent": {
+                "name": "FallbackIntent",
+                "slots": {},
+                "state": "InProgress",
+                "confirmationState": "None"
+            }
+        },
+        {
+            "interpretationSource": "Lex",
+            "nluConfidence": 0.48,
+            "intent": {
+                "name": "llmIntent",
+                "slots": {
+                    "llmSlot": null
+                },
+                "state": "InProgress",
+                "confirmationState": "None"
+            }
+        }
+    ],
+    "bot": {
+        "name": "bridge",
+        "version": "DRAFT",
+        "localeId": "es_US",
+        "id": "FZELVO24WI",
+        "aliasId": "TSTALIASID",
+        "aliasName": "TestBotAlias"
+    },
+    "responseContentType": "text/plain; charset=utf-8",
+    "sessionState": {
+        "originatingRequestId": "fc5ff294-e6e7-4986-9ccb-3c1c7498d650",
+        "sessionAttributes": {},
+        "intent": {
+            "name": "FallbackIntent",
+            "slots": {},
+            "state": "InProgress",
+            "confirmationState": "None"
+        }
+    },
+    "messageVersion": "1.0",
+    "invocationSource": "DialogCodeHook"
+}

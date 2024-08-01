@@ -1,0 +1,47 @@
+{
+    "Details": {
+        "ContactData": {
+            "Attributes": {},
+            "AwsRegion": "us-east-1",
+            "Channel": "VOICE",
+            "ContactId": "e9b3c701-196e-4a6b-a2ea-b002439303c9",
+            "CustomerEndpoint": {
+                "Address": "+56974769647",
+                "Type": "TELEPHONE_NUMBER"
+            },
+            "CustomerId": null,
+            "Description": null,
+            "InitialContactId": "e9b3c701-196e-4a6b-a2ea-b002439303c9",
+            "InitiationMethod": "INBOUND",
+            "InstanceARN": "arn:aws:connect:us-east-1:461004555540:instance/f5dbbb06-46e7-4435-beab-3b3303074765",
+            "LanguageCode": "es-MX",
+            "MediaStreams": {
+                "Customer": {
+                    "Audio": null
+                }
+            },
+            "Name": null,
+            "PreviousContactId": "e9b3c701-196e-4a6b-a2ea-b002439303c9",
+            "Queue": null,
+            "References": {},
+            "RelatedContactId": null,
+            "SegmentAttributes": {
+                "connect:Subtype": {
+                    "ValueInteger": null,
+                    "ValueMap": null,
+                    "ValueString": "connect:Telephony"
+                }
+            },
+            "SystemEndpoint": {
+                "Address": "+56800914982",
+                "Type": "TELEPHONE_NUMBER"
+            },
+            "Tags": {
+                "aws:connect:instanceId": "f5dbbb06-46e7-4435-beab-3b3303074765",
+                "aws:connect:systemEndpoint": "+56800914982"
+            }
+        },
+        "Parameters": {}
+    },
+    "Name": "ContactFlowEvent"
+}

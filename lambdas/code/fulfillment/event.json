@@ -1,0 +1,58 @@
+{
+    "inputMode": "Text",
+    "sessionId": "fb1fda27-8d23-42ad-8c1a-b986450bac40",
+    "requestAttributes": {
+        "x-amz-lex:accept-content-types": "PlainText",
+        "x-amz-lex:channels:platform": "Connect Chat"
+    },
+    "inputTranscript": "Mi apellido rodríguez",
+    "interpretations": [
+        {
+            "interpretationSource": "Lex",
+            "intent": {
+                "name": "FallbackIntent",
+                "slots": {},
+                "state": "ReadyForFulfillment",
+                "confirmationState": "None"
+            }
+        },
+        {
+            "interpretationSource": "Lex",
+            "nluConfidence": 0.33,
+            "intent": {
+                "name": "llmIntent",
+                "slots": {
+                    "llmSlot": null
+                },
+                "state": "ReadyForFulfillment",
+                "confirmationState": "None"
+            }
+        }
+    ],
+    "bot": {
+        "name": "bridge",
+        "version": "DRAFT",
+        "localeId": "es_419",
+        "id": "FZELVO24WI",
+        "aliasId": "TSTALIASID",
+        "aliasName": "TestBotAlias"
+    },
+    "responseContentType": "text/plain; charset=utf-8",
+    "sessionState": {
+        "originatingRequestId": "24624edc-51e9-4f9d-89fb-6d625db56b81",
+        "sessionAttributes": {
+            "x-amz-lex:allow-interrupt:*:*": "true",
+            "ContactId": "541e2266-2346-4b03-8c0b-31aa9613f48e",
+            "x-amz-lex:audio:end-timeout-ms:*:*": "1500",
+            "x-amz-lex:barge-in-enabled:*:*": "true"
+        },
+        "intent": {
+            "name": "FallbackIntent",
+            "slots": {},
+            "state": "ReadyForFulfillment",
+            "confirmationState": "None"
+        }
+    },
+    "messageVersion": "1.0",
+    "invocationSource": "FulfillmentCodeHook"
+}
