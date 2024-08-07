@@ -26,6 +26,16 @@ class Tables(Construct):
             **TABLE_CONFIG,
         )
 
+        self.issues = ddb.Table(
+            self,
+            "issue",
+            partition_key=ddb.Attribute(
+                name="issue_number", type=ddb.AttributeType.STRING
+            ),
+            **TABLE_CONFIG,
+        )
+
+
         self.pedidos = ddb.Table(
             self,
             "orders",

@@ -17,18 +17,23 @@ from bots.lex_v2_role import LexV2Role
 
 
 class LexBotV2(Construct):
-    def __init__(self, scope: Construct, id: str, bot_name, bot_locale, code_hook, s3_key, s3_bucket,  **kwargs) -> None:
+    def __init__(self, scope: Construct, id: str, bot_name, bot_locale, code_hook, alias,  s3_key, s3_bucket,  **kwargs) -> None:
         super().__init__(scope, id, **kwargs)
 
 
         bot_role = LexV2Role(self, 'SLRLexV2', bot_name)
         log_group = CWLogGroup(self, "logGroup", log_group_name = bot_name)
 
+        lambda_arn=f"{code_hook.function_arn}"
+
+        if alias:
+            lambda_arn=f"{code_hook.function_arn}:{alias}"
+
+
 
         code_hook_specification=lex.CfnBot.CodeHookSpecificationProperty(
             lambda_code_hook=lex.CfnBot.LambdaCodeHookProperty(
-                code_hook_interface_version="1.0",
-                lambda_arn=code_hook.function_arn
+                code_hook_interface_version="1.0",lambda_arn=lambda_arn
             )
         )
         bot_alias_locale_setting=lex.CfnBot.BotAliasLocaleSettingsProperty(
@@ -67,10 +72,6 @@ class LexBotV2(Construct):
             )
         )
 
-        code_hook.add_permission(
-            principal=iam.ServicePrincipal("lexv2.amazonaws.com"),id=f"{bot_name}-invoke",
-            action='lambda:InvokeFunction', source_arn = f"arn:aws:lex:{Stack.of(self).region}:{Stack.of(self).account}:bot-alias/*")
-        
         cfn_bot.node.add_dependency(bot_role.role)
         cfn_bot.node.add_dependency(s3_bucket)
 

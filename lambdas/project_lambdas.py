@@ -34,6 +34,8 @@ class Lambdas(Construct):
              layers=[boto3_later.layer],
             code = aws_lambda.Code.from_asset("./lambdas/code/fulfillment"), **COMMON_LAMBDA_CONF)
         
+
+
         """
         self.async_llm_call = aws_lambda.Function(
             self, "AsyncLMLCall", 
@@ -44,16 +46,16 @@ class Lambdas(Construct):
         
         self.async_llm_call.grant_invoke(self.fulfillment)
 
-
-        self.get_response_delta = aws_lambda.Function(
-            self, "GetResponseDelta", 
-            function_name="Get-Response-Delta",
-            handler="lambda_function.lambda_handler",
-            code = aws_lambda.Code.from_asset("./lambdas/code/get_response_delta"), **COMMON_LAMBDA_CONF)
         """
+        self.get_customer_data = aws_lambda.Function(
+            self, "GCD", 
+            function_name="Get-Customer-Data",
+            handler="lambda_function.lambda_handler",
+            code = aws_lambda.Code.from_asset("./lambdas/code/get_customer_data"), **COMMON_LAMBDA_CONF)
+        
 
         self.fulfillment.add_to_role_policy(iam.PolicyStatement(actions=['dynamodb:*'],resources=["*"]))
         self.fulfillment.add_to_role_policy(iam.PolicyStatement(actions=['bedrock:*'],resources=["*"]))
 
-        # self.fulfillment.add_to_role_policy(iam.PolicyStatement(actions=['dynamodb:*'], resources=["*"]))
+        self.get_customer_data.add_to_role_policy(iam.PolicyStatement(actions=['dynamodb:*'], resources=["*"]))
 

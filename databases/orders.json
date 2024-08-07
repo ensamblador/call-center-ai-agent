@@ -20,7 +20,7 @@
                 "S": "2024-08-06"
             },
             "status": {
-                "S": "delivery"
+                "S": "Despacho Programado"
             },
             "shipping_address": {
                 "S": "Calle las acacias 123, Providencia. Region Metropolitana"
@@ -46,7 +46,7 @@
                 "S": "2024-08-06"
             },
             "status": {
-                "S": "pending"
+                "S": "Pendiente Bodega"
             },
             "shipping_address": {
                 "S": "Calle las acacias 123, Providencia. Region Metropolitana"

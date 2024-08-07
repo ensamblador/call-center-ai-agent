@@ -1,0 +1,65 @@
+{
+    "inputMode": "Text",
+    "sessionId": "461004555540321",
+    "inputTranscript": "chuta seria bueno poder tener una conversacion con humano",
+    "interpretations": [
+        {
+            "interpretationSource": "Lex",
+            "intent": {
+                "confirmationState": "null",
+                "name": "FallbackIntent",
+                "slots": {},
+                "state": "ReadyForFulfillment"
+            }
+        },
+        {
+            "interpretationSource": "Lex",
+            "nluConfidence": 0.47,
+            "intent": {
+                "confirmationState": "null",
+                "name": "AgentIntent",
+                "slots": {},
+                "state": "ReadyForFulfillment"
+            }
+        },
+        {
+            "interpretationSource": "Lex",
+            "nluConfidence": 0.32,
+            "intent": {
+                "confirmationState": "null",
+                "name": "llmIntent",
+                "slots": {
+                    "llmSlot": null
+                },
+                "state": "ReadyForFulfillment"
+            }
+        }
+    ],
+    "bot": {
+        "aliasId": "TSTALIASID",
+        "aliasName": "TestBotAlias",
+        "name": "demo-llm",
+        "version": "DRAFT",
+        "localeId": "es_419",
+        "id": "UNCPEWK1YE"
+    },
+    "responseContentType": "text/plain; charset=utf-8",
+    "sessionState": {
+        "originatingRequestId": "4a7cbc73-6d15-4422-9b3e-cd51062d5bf4",
+        "sessionAttributes": {
+            "previous_slot_to_elicit": null,
+            "previous_message": "[{\"contentType\": \"PlainText\", \"content\": \"He abierto un ticket con los detalles de tu pedido atrasado y he solicitado que se pueda acelerar la entrega. El n\\u00famero de ticket es 461004555540321.\\n\\nNuestro equipo de soporte se pondr\\u00e1 en contacto contigo a la brevedad para darte un seguimiento del estado de tu pedido y ver qu\\u00e9 opciones tenemos para agilizar la entrega. \\u00bfNecesitas algo m\\u00e1s por el momento?\"}]",
+            "previous_dialog_action_type": "ElicitIntent",
+            "previous_intent": "FallbackIntent"
+        },
+        "activeContexts": [],
+        "intent": {
+            "confirmationState": "null",
+            "name": "FallbackIntent",
+            "slots": {},
+            "state": "ReadyForFulfillment"
+        }
+    },
+    "messageVersion": "1.0",
+    "invocationSource": "FulfillmentCodeHook"
+}

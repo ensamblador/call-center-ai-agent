@@ -20,7 +20,7 @@ def close(active_contexts, session_attributes, intent, messages):
     active_contexts = remove_inactive_context(active_contexts)
     intent['state'] = 'Fulfilled'
     print('Closing Intent')
-    return {
+    return_object = {
         'sessionState': {
             'activeContexts': active_contexts,
             'sessionAttributes': session_attributes,
@@ -33,12 +33,15 @@ def close(active_contexts, session_attributes, intent, messages):
         #'requestAttributes': {},
         #'messages': messages
     }
+    print ("returning:", return_object)
+    return return_object
     
 def close_and_delegate(active_contexts, session_attributes, intent, messages):
     active_contexts = remove_inactive_context(active_contexts)
     intent['state'] = 'Fulfilled'
     print('Closing Intent')
-    return {
+
+    return_object = {
         'sessionState': {
             'activeContexts': active_contexts,
             'sessionAttributes': session_attributes,
@@ -51,6 +54,8 @@ def close_and_delegate(active_contexts, session_attributes, intent, messages):
         #'requestAttributes': {},
         #'messages': messages
     }
+    print ("returning:", return_object)
+    return return_object
     
 
 def elicit_intent(active_contexts, session_attributes, intent, messages):
